@@ -11,24 +11,28 @@ const styles = theme => ({
       display : "flex",
       color : "white",
       marginLeft : "300px",
+      height: '50px',
       boxSizing: 'border-box',
       border: 'none',
       padding: '5px',
       fontSize: '20px',
       width: 'calc(100% - 300px)',
       backgroundColor: '#29487d',
-      paddingLeft: '20px',
+      paddingLeft: '50px',
     },
     editIcon: {
-      position: 'relative',
-
+      position: 'absolute',
+      left: '310px',
+      top: '80px',
       color: 'white',
       width: '5',
       height: '5'
     },
     editorContainer: {
-      height: '700px',
+      height: '720px',
       boxSizing: 'border-box',
+      paddingLeft : '5px'
+      //marginTop : '60px'
 
     }
   });

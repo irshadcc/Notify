@@ -1,9 +1,8 @@
 const styles = theme => ({
     root: {
       backgroundColor: theme.palette.background.paper,
-    
       height: 'calc(100% - 35px)',
-      position: 'absolute',
+      position: 'relative',
       left: '0',
       width: '300px',
       boxShadow: ' var(--box-shadow)',
@@ -29,7 +28,7 @@ const styles = theme => ({
     sidebarContainer: {
       //marginTop: '70px',
       width: '300px',
-      height: '640px',
+      height: 'calc(100vh - 20px)',
       boxSizing: 'border-box',
       float: 'left',
       overflowY: 'auto',

@@ -7,6 +7,8 @@ import React, { Component } from 'react'
 import Grid from '@material-ui/core/Grid';
 import Input from '@material-ui/core/Input';
 
+import { Typography } from '@material-ui/core';
+import { Select, Button } from 'antd';
 
 
 class Editor extends Component {
@@ -18,7 +20,8 @@ class Editor extends Component {
       id: '',
       tags: '',
       fired: false,
-      tag: ''
+      tag: '',
+      url : ''
 
     };
   }
@@ -30,7 +33,8 @@ class Editor extends Component {
       text: this.props.selectedNote.body,
       title: this.props.selectedNote.title,
       id: this.props.selectedNoteIndex,
-      tags: this.props.selectedNote.tags
+      tags: this.props.selectedNote.tags,
+      url : this.props.selectedNote.url
     });
   }
 
@@ -42,8 +46,23 @@ class Editor extends Component {
         title: this.props.selectedNote.title,
         id: this.props.selectedNoteIndex,
         tags: this.props.selectedNote.tags,
+        url : this.props.selectedNote.url
+
       });
     }
+  }
+
+  handleClick = (body,url) => {
+    console.log(body,url);
+    let note = { 'body' : body , url : url }
+
+    let noteElem = document.createElement("note")
+
+    noteElem.textContent = JSON.stringify(note)
+    document.head.appendChild(noteElem)
+    let event = new Event('go-to-source');
+    document.dispatchEvent(event)
+
   }
 
   render() {
@@ -53,34 +72,54 @@ class Editor extends Component {
 
     return (
       <div className={classes.editorContainer}>
-        
+        <BorderColorIcon className={classes.editIcon}></BorderColorIcon>
 
         <Grid item xs={12} className={classes.titleInput}>
-        <BorderColorIcon style = {{ marginTop : "5px" , paddingRight : "5px"}}></BorderColorIcon>
           <Input
             autoFocus="true"
             style={{ color: "white", width: "200px" }}
             placeholder='Note title...'
             value={this.state.title ? this.state.title : ''}
             onChange={(e) => this.updateTitle(e.target.value)}>
-
           </Input>
+          {
+            <div style={{ display: "flex", width:"28em", marginLeft: "200px" , justifyContent : 'space-around', alignItems: "center"  }} >
+            
+            <div style={{display:"flex"}}>
+            <Typography style={{ paddingTop: "10px" }}>
+              Tags :
+            </Typography>
 
-       
+
+            <Select mode="tags" style={{ width: '300px', marginLeft: "5px", marginTop: "5px" }} placeholder="Tags"
+              onChange={this.handleChange}
+              allowClear = {true}
+              value={this.state.tags ? this.state.tags : null }
+            >
+            </Select>
+            </div>
+
+            <Button onClick = { () => this.handleClick(this.state.text , this.state.url)} >
+              Go to link
+            </Button>
+          </div>
+          }
+
+
         </Grid>
         <ReactQuill
           value={this.state.text}
           onChange={this.updateBody}
           modules={Editor.modules}
           formats={Editor.formats}
-        //  placeholder={this.props.placeholder}
-        >
+          bounds={'.app'}
+          placeholder={this.props.placeholder}>
         </ReactQuill>
       </div>
     );
   }
 
-  
+
   handleChange = async (value) => {
     await this.setState({ tags: value });
     this.update();
@@ -105,37 +144,27 @@ class Editor extends Component {
 
 export default withStyles(styles)(Editor);
 
-var toolbarOptions = [
-  ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
-  ['blockquote', 'code-block'],
-
-  [{ 'header': 1 }, { 'header': 2 }], 
-                                        // custom button values
- [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-//[{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
-  [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
-  [{ 'direction': 'rtl' }],                         // text direction
-
-  [{ 'size': [] }],  // custom dropdown
-  [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-
-  [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
-  [{ 'font': [] }],
-  [{ 'align': [] }],
-  ['image', 'video' , 'link'],
-
-  ['clean']                                         // remove formatting button
-];
-
 Editor.modules = {
-  toolbar: toolbarOptions,
-
-   clipboard: {
-     // toggle to add extra line breaks when pasting HTML:
-     matchVisual: true,
-   }
+  toolbar: [
+    ['bold', 'italic', 'underline', 'strike'],
+    ['blockquote', 'code-block'],
+    [{ 'header': '1' }, { 'header': '2' }, { 'font': [] }, { 'align': [] }],
+    [{ size: [] }],
+    [{ 'color': [] }, { 'background': [] }],
+    [{ 'list': 'ordered' }, { 'list': 'bullet' },
+    { 'indent': '-1' }, { 'indent': '+1' }],
+    ['image', 'video'],
+    ['clean']
+  ],
+  clipboard: {
+    // toggle to add extra line breaks when pasting HTML:
+    matchVisual: false,
+  }
 }
-
+/*
+ * Quill editor formats
+ * See https://quilljs.com/docs/formats/
+ */
 Editor.formats = [
   'header', 'font', 'size', 'code-block',
   'bold', 'italic', 'underline', 'strike', 'blockquote',
@@ -143,3 +172,7 @@ Editor.formats = [
   'image', 'video', 'clean'
 ]
 
+// chrome.browserAction.onClicked.addListener(function(activeTab){
+//   var newURL = "http://stackoverflow.com/";
+//   chrome.tabs.create({ url: newURL });
+// });

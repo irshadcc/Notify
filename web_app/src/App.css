@@ -1,4 +1,4 @@
- @import "../node_modules/antd/dist/antd.css";
+@import "../node_modules/antd/dist/antd.css";
 
 html, body {
   height: 100%;
@@ -12,22 +12,22 @@ html, body {
 #evernote-container {
   height: 100%;
   box-sizing: border-box;
+
 }
 .app-container {
   height: 100%;
   box-sizing: border-box;
 }
 .quill {
-  height: 90%;
+  height: 100%;
   box-sizing: border-box;
   width: calc(100% - 300px);
   float: left;
 }
 .ql-container {
   box-sizing: border-box;
-  height: calc(100% - 100px);
+  height: calc(100% - 210px);
   overflow-y: auto;
-
 }
 .ql-editor {
   cursor: text;

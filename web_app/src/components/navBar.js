@@ -209,14 +209,11 @@ firebase
       <AppBar position="static">
         <Toolbar>
 
-          <Typography className={classes.title} variant="h5" noWrap>
-            Notify
+          <Typography className={classes.title} variant="h4" noWrap style = {{color : "white"}} >
+            NOTIFY
 
           </Typography>
-
-           {/*search bar  */}
-
-          {/* <div className={classes.search} style={{ width: "300px" }}>
+          <div className={classes.search} style={{ width: "300px" }}>
             <Select
               mode="tags"
               // value={value}
@@ -238,7 +235,7 @@ firebase
 
               }
             </Select>
-          </div> */}
+          </div>
 
 
 

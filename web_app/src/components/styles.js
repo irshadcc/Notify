@@ -2,9 +2,7 @@ const styles = (theme) => ({
 	root: {
         display: 'flex',
   },
-  typography: {
-    fontFamily: '"Product Sans", serif',
-  },
+
 	appBar: {
 		zIndex: theme.zIndex.drawer + 1
     },
