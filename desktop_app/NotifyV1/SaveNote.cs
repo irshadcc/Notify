@@ -137,11 +137,13 @@ namespace NotifyV1
             if(ocrBox.Checked)
             {
                 DBInterface.GetOCR(snip, setText);
+                ocrBox.Enabled = false;
             }
             else
             {
                 richTextBox1.Visible = false;
             }
+
         }
     }
 }

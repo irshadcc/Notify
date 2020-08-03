@@ -382,6 +382,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DBInterface.cs" />
+    <Compile Include="AI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AI.designer.cs">
+      <DependentUpon>AI.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -409,6 +415,7 @@
     <Compile Include="Widget.Designer.cs">
       <DependentUpon>Widget.cs</DependentUpon>
     </Compile>
+    <Content Include="Commands.txt" />
     <None Include="NotifyDay1_TemporaryKey.pfx" />
     <None Include="Resources\animation1.gif" />
     <None Include="Resources\password.png" />
@@ -422,6 +429,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="canvas.resx">
       <DependentUpon>canvas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AI.resx">
+      <DependentUpon>AI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>

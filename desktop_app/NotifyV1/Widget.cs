@@ -79,8 +79,6 @@ namespace NotifyV1
             {
                 this.Show();
             }
-            
-
         }
 
         private void noteBtn_Click(object sender, EventArgs e)
@@ -124,7 +122,22 @@ namespace NotifyV1
 
         private void aiBtn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("To be implemented");
+            //MessageBox.Show("To be implemented");
+
+            this.WindowState = FormWindowState.Minimized;
+            if(Ava.isAwake)
+            {
+                Ava.IamHere();
+            }
+            else
+            {
+                Ava ava = new Ava();
+                //aiBtn.Enabled = false; 
+                ava.Show();
+
+            }
+            
+
         }
     }
 }
