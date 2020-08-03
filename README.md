@@ -106,20 +106,20 @@ Notify is a modern note taking app, developed as a solution for problem statemen
 
 ## App preview
 
-![Add Image](mobile_app/screenshots/add_image_notify.jpg "Add Image")
-![Add Menu](mobile_app/screenshots/add_menu_notify.jpg "Add Menu")
-![Bookmark Confirm](mobile_app/screenshots/bookmark_confirm_notify.jpg "Bookmark Confirm")
-![Bookmark List](mobile_app/screenshots/bookmark_list_notify.jpg "Bookmark List")
-![Dashboard](mobile_app/screenshots/dashboard_notify.jpg "Dashboard")
-![Doodle](mobile_app/screenshots/doodle_notify.jpg "Doodle")
-![Edit Note](mobile_app/screenshots/edit_note_notify.jpg "Edit Note")
-![Floating Widget](mobile_app/screenshots/floating_widget_notify.jpg "Floating Widget")
-![Floating Widget Options](mobile_app/screenshots/floating_widget_options_notify.jpg "Floating Widget Options")
-![Markdown Editor](mobile_app/screenshots/markdown_editor_notify.jpg "Markdown Editor")
-![Search](mobile_app/screenshots/search_notify.jpg "Search")
-![Share](mobile_app/screenshots/share_notify.jpg "Share")
-![Sign Up](mobile_app/screenshots/sign_up_notify.jpg "Sign Up")
-![Welcome Page](mobile_app/screenshots/welcome_page_notify.jpg "Welcome Page")
+![Add Image](mobile_app/screenshots/add_image_notify.png "Add Image")
+![Add Menu](mobile_app/screenshots/add_menu_notify.png "Add Menu")
+![Bookmark Confirm](mobile_app/screenshots/bookmark_confirm_notify.png "Bookmark Confirm")
+![Bookmark List](mobile_app/screenshots/bookmark_list_notify.png "Bookmark List")
+![Dashboard](mobile_app/screenshots/dashboard_notify.png "Dashboard")
+![Doodle](mobile_app/screenshots/doodle_notify.png "Doodle")
+![Edit Note](mobile_app/screenshots/edit_note_notify.png "Edit Note")
+![Floating Widget](mobile_app/screenshots/floating_widget_notify.png "Floating Widget")
+![Floating Widget Options](mobile_app/screenshots/floating_widget_options_notify.png "Floating Widget Options")
+![Markdown Editor](mobile_app/screenshots/markdown_editor_notify.png "Markdown Editor")
+![Search](mobile_app/screenshots/search_notify.png "Search")
+![Share](mobile_app/screenshots/share_notify.png "Share")
+![Sign Up](mobile_app/screenshots/sign_up_notify.png "Sign Up")
+![Welcome Page](mobile_app/screenshots/welcome_page_notify.png "Welcome Page")
 
 ## Installation
 
