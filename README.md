@@ -68,3 +68,10 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+## Functionality of Web Apps
+
+The user can perform all the curd operations in the web app. It also includes a share feature where thw user can share notes with others and also mark the note as favourate which act as bookmark for the user.It is combined with high end encrytion of Firebase and databse services like firestore which the the latest in the market and works on No-SQL databases concept for efficient and secured personalised notes.
+
+
