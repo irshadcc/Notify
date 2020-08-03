@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Notify</title>
+    <link rel="stylesheet" type="text/css" href="popup.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div id="popup">
+        <button id="highlight" title="Toggle the use of the highlighter tool">Notify</button>
+        <div id="highlights-list-container">
+            <h2>Highlights on this page:</h2>
+            <ul id="highlights-list">
+                <li id='no-highlights-message'>There are no highlights on this page</li>
+            </ul>
+
+
+            <button id="copy-highlights" title="Copy all highlights on the page to the clipboard">Copy All</button>
+            <button id="remove-highlights" title="Remove all highlights on the page">Remove All</button>
+            <div id="notebooks">
+                <form>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <label>Notebooks :</label>
+                            </div>
+                                <div class="col">
+                                    <select id="notebook_list">
+                                        <option value="" disabled>Select a Notebook</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="display: none;"class="row">
+                            <div class="col">
+                                <label>Notes : </label>
+                            </div>
+                            <div class="col">
+                                <select id="notes_list" >
+                                    <option value="" disabled>Select a Note</option>
+                                </select>
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+
+
+            </div>
+            <div id='remove-ask-confirmation'>
+                <div><b>Are you sure?</b> <em>This will permanently delete all highlights on this page.</em></div>
+                <button id="remove-confirm">Delete</button>
+                <button id="remove-cancel">Cancel</button>
+            </div>
+        </div>
+
+        <div id="console">
+
+        </div>
+
+        <!-- <div id="colors">
+                <label class="selected" title="Change highlight color">
+                    <input type="radio" checked="checked" name="color" value="yellow" />
+                    <span></span>
+                </label>
+                <label title="Change highlight color">
+                    <input type="radio" name="color" value="cyan" />
+                    <span></span>
+                </label>
+                <label title="Change highlight color">
+                    <input type="radio" name="color" value="lime" />
+                    <span></span>
+                </label>
+                <label title="Change highlight color">
+                    <input type="radio" name="color" value="magenta" />
+                    <span></span>
+                </label>
+            </div> -->
+
+        <script src="popup.js"></script>
+</body>
+
+</html>
