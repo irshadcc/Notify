@@ -1,0 +1,8 @@
+Pillow
+numpy
+opencv-python
+Flask
+pyjwt
+pymongo
+pytesseract
+tesserocr
